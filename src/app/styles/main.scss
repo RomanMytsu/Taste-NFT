@@ -1,0 +1,17 @@
+@use "fonts.scss";
+@use "reset.scss";
+
+body {
+  font-family: $font-family;
+  font-weight: 600;
+  color: #fff;
+  background: $color-background;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding-inline: 24px;
+  margin: 0 auto;
+}
