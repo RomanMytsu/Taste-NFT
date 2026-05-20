@@ -48,6 +48,9 @@ const { Data } = useWalletStore()
   &__container {
     display: flex;
     gap: 16px;
+    @media (max-width: $bp-laptop-sm) {
+      flex-direction: column;
+    }
   }
 
   &__left-content {
@@ -55,6 +58,11 @@ const { Data } = useWalletStore()
     display: flex;
     align-items: flex-end;
     max-width: 516px;
+
+    @media (max-width: $bp-laptop-sm) {
+      flex: auto;
+      max-width: 100%;
+    }
 
     :deep(.artwork-details__bottom) {
       .field {
@@ -77,6 +85,13 @@ const { Data } = useWalletStore()
     aspect-ratio: 786 / 519;
     min-width: 0;
     position: relative;
+
+    @media (max-width: $bp-laptop-sm) {
+      flex: auto;
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: auto;
+    }
   }
 }
 </style>

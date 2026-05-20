@@ -24,7 +24,6 @@ const modules = [EffectCreative, Pagination]
     :grabCursor="true"
     :loopAdditionalSlides="4"
     :slidesPerView="'auto'"
-    :loop="true"
     :pagination="{
       clickable: true,
       el: '.hero-slider-pagination',
@@ -47,7 +46,7 @@ const modules = [EffectCreative, Pagination]
   >
     <swiper-slide v-for="item in items" :key="item.id" class="hero-slider__slide">
       <div class="hero-slider-img-wrap">
-        <img :src="item.img" :alt="item.title" width="519" height="519" />
+        <img :src="item.img" :alt="item.title" class="hero-slider-img" width="519" height="519" />
       </div>
     </swiper-slide>
   </swiper>
@@ -62,8 +61,6 @@ const modules = [EffectCreative, Pagination]
 
 .hero-slider-img-wrap {
   aspect-ratio: 1;
-  background: #c4c4c4;
-  border-radius: 4px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
@@ -94,5 +91,15 @@ const modules = [EffectCreative, Pagination]
   width: 38vw !important;
   max-width: 519px;
   max-height: 519px;
+
+  @media (max-width: $bp-laptop-sm) {
+    width: 62vw !important;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media (max-width: $bp-mobile-l) {
+    width: 100% !important;
+  }
 }
 </style>
